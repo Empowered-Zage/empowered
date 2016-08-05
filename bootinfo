@@ -1,0 +1,328 @@
+ Boot Info Script e7fc706 + Boot-Repair extra info      [Boot-Info 23Nov2014]
+
+
+============================= Boot Info Summary: ===============================
+
+ => Syslinux MBR (4.04 and higher) is installed in the MBR of /dev/sda.
+
+sda1: __________________________________________________________________________
+
+    File system:       ext3
+    Boot sector type:  -
+    Boot sector info: 
+    Operating System:  
+    Boot files:        
+
+sda2: __________________________________________________________________________
+
+    File system:       Extended Partition
+    Boot sector type:  Unknown
+    Boot sector info: 
+
+sda5: __________________________________________________________________________
+
+    File system:       
+    Boot sector type:  -
+    Boot sector info: 
+    Mounting failed:   mount: unknown filesystem type ''
+
+sda6: __________________________________________________________________________
+
+    File system:       swap
+    Boot sector type:  -
+    Boot sector info: 
+
+============================ Drive/Partition Info: =============================
+
+Drive: sda _____________________________________________________________________
+
+Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+
+Partition  Boot  Start Sector    End Sector  # of Sectors  Id System
+
+/dev/sda1    *          2,048 1,920,425,983 1,920,423,936  83 Linux
+/dev/sda2       1,920,428,030 1,953,523,711    33,095,682   5 Extended
+/dev/sda5       1,936,975,872 1,953,523,711    16,547,840  82 Linux swap / Solaris
+/dev/sda6       1,920,428,032 1,936,975,871    16,547,840  82 Linux swap / Solaris
+
+
+"blkid" output: ________________________________________________________________
+
+Device           UUID                                   TYPE       LABEL
+
+/dev/loop0                                              squashfs   
+/dev/sda1        fb63ebfa-56ad-430d-8562-9828087071ad   ext3       
+/dev/sda6        feff52bb-ca55-4c74-bc6d-ca56ccc7d6f9   swap       
+/dev/sr0                                                iso9660    Boot-Repair-Disk 64bit
+/dev/zram0       7f95ba27-de1d-443c-abe9-109ef0766aff   swap       
+/dev/zram1       6b0076ea-900b-4bd6-8677-650fb485af5a   swap       
+/dev/zram2       f83cbde0-26a9-44ee-b430-323f583cce96   swap       
+/dev/zram3       8f307616-aa5d-43be-9ad9-80f173cfd3e3   swap       
+/dev/zram4       282029ca-7047-4fe9-b81f-2b5fcf5d5606   swap       
+/dev/zram5       ebd211a7-3cee-41c3-a3da-e9575df0bf58   swap       
+/dev/zram6       14e87829-1642-4072-bc79-7b9331410e36   swap       
+/dev/zram7       057dbe6d-6f29-43f5-a553-5576cf20c183   swap       
+
+========================= "ls -l /dev/disk/by-id" output: ======================
+
+total 0
+lrwxrwxrwx 1 root root  9 Aug  5 20:00 ata-ST1000LM024_HN-M101MBB_S2RUJ9CD708529 -> ../../sda
+lrwxrwxrwx 1 root root 10 Aug  5 19:53 ata-ST1000LM024_HN-M101MBB_S2RUJ9CD708529-part1 -> ../../sda1
+lrwxrwxrwx 1 root root 10 Aug  5 15:49 ata-ST1000LM024_HN-M101MBB_S2RUJ9CD708529-part2 -> ../../sda2
+lrwxrwxrwx 1 root root 10 Aug  5 15:52 ata-ST1000LM024_HN-M101MBB_S2RUJ9CD708529-part5 -> ../../sda5
+lrwxrwxrwx 1 root root 10 Aug  5 15:52 ata-ST1000LM024_HN-M101MBB_S2RUJ9CD708529-part6 -> ../../sda6
+lrwxrwxrwx 1 root root  9 Aug  5 15:49 ata-Slimtype_DVD_A_DS8A9SH_693317405247 -> ../../sr0
+lrwxrwxrwx 1 root root  9 Aug  5 20:00 wwn-0x50004cf20aa59e9a -> ../../sda
+lrwxrwxrwx 1 root root 10 Aug  5 19:53 wwn-0x50004cf20aa59e9a-part1 -> ../../sda1
+lrwxrwxrwx 1 root root 10 Aug  5 15:49 wwn-0x50004cf20aa59e9a-part2 -> ../../sda2
+lrwxrwxrwx 1 root root 10 Aug  5 15:52 wwn-0x50004cf20aa59e9a-part5 -> ../../sda5
+lrwxrwxrwx 1 root root 10 Aug  5 15:52 wwn-0x50004cf20aa59e9a-part6 -> ../../sda6
+
+================================ Mount points: =================================
+
+Device           Mount_Point              Type       Options
+
+/dev/loop0       /rofs                    squashfs   (ro,noatime)
+/dev/sr0         /cdrom                   iso9660    (ro,noatime)
+
+
+======================== Unknown MBRs/Boot Sectors/etc: ========================
+
+Unknown BootLoader on sda2
+
+00000000  9d e1 a0 59 93 a9 b7 47  c5 aa 27 a5 b0 77 22 80  |...Y...G..'..w".|
+00000010  cc fc ca f8 b8 ab 9b 77  e8 3b ec 90 ec a0 73 8b  |.......w.;....s.|
+00000020  87 ee 27 b0 31 c4 3f 26  6f 86 17 f5 03 6d a9 64  |..'.1.?&o....m.d|
+00000030  2f 2e a8 b7 a1 d8 68 77  d5 49 63 8d e1 ce f5 b1  |/.....hw.Ic.....|
+00000040  89 ce 25 97 e5 97 31 97  4d b0 e0 c4 3b 66 e5 40  |..%...1.M...;f.@|
+00000050  9e 82 57 a5 e6 0d 9b 09  c1 fd da 2d 17 c7 d4 52  |..W........-...R|
+00000060  a6 e1 f8 0f 51 6e 17 29  4a 38 a5 0d 20 c1 f5 7c  |....Qn.)J8.. ..||
+00000070  c4 96 df ee b0 35 b3 b5  02 87 0b ff f7 48 36 2e  |.....5.......H6.|
+00000080  62 a3 a3 1e 26 c5 e0 b5  c2 11 71 13 4d 55 8e 49  |b...&.....q.MU.I|
+00000090  72 43 27 9e f9 30 5d 00  ca 18 bd db 82 3a 98 ff  |rC'..0]......:..|
+000000a0  3f 3c 24 a5 c8 37 41 1d  81 43 9e 1e 28 db cd c7  |?<$..7A..C..(...|
+000000b0  e1 31 51 c4 53 26 86 3d  eb 22 ff 35 b6 65 f8 81  |.1Q.S&.=.".5.e..|
+000000c0  69 26 f6 28 35 a4 a1 b9  03 4c af 06 26 62 5a b7  |i&.(5....L..&bZ.|
+000000d0  66 7f 0f f6 4f bf 8e 71  0f 55 16 16 5e 2a ee c8  |f...O..q.U..^*..|
+000000e0  e3 39 35 09 13 ac 4a 92  1b 4b 95 7b b8 ee fc 11  |.95...J..K.{....|
+000000f0  f6 51 e6 96 cb 9e 93 fb  32 23 95 f9 a3 27 5b a4  |.Q......2#...'[.|
+00000100  81 02 09 7e cd aa 38 3d  59 06 f2 13 f8 77 c5 61  |...~..8=Y....w.a|
+00000110  0a 15 31 36 e1 58 9c de  3d 13 61 b4 da 7b 45 e3  |..16.X..=.a..{E.|
+00000120  94 90 a2 9f ce ab 71 5c  b1 60 6c 26 e6 52 47 28  |......q\.`l&.RG(|
+00000130  12 a0 fb be 52 ad f4 b0  1d 8d 2f fe ab 5c 67 8e  |....R...../..\g.|
+00000140  3c 44 bd 8b 7e 21 42 c2  fc 86 89 b1 01 bd 73 44  |<D..~!B.......sD|
+00000150  ac 45 73 9d e1 da 7d 43  b2 f8 2b 23 78 60 0b 5d  |.Es...}C..+#x`.]|
+00000160  11 f4 d7 57 00 c3 c2 1e  68 00 b6 76 9f e0 41 83  |...W....h..v..A.|
+00000170  ec 50 86 28 d5 fa a0 28  a3 57 da a4 28 97 4f bd  |.P.(...(.W..(.O.|
+00000180  ca 23 23 c5 91 ce 45 b9  7f 83 68 98 00 c8 f5 75  |.##...E...h....u|
+00000190  a5 19 6f d6 fa 37 6d c3  3c e2 5e c2 e7 fc 8e 3f  |..o..7m.<.^....?|
+000001a0  06 82 ec e0 22 14 df 7e  c2 72 73 7f e8 d0 d3 ae  |...."..~.rs.....|
+000001b0  7b 59 7e 0d 96 f7 6b 1d  c0 7f c6 c3 55 54 00 fe  |{Y~...k.....UT..|
+000001c0  ff ff 82 fe ff ff 02 80  fc 00 00 80 fc 00 00 fe  |................|
+000001d0  ff ff 05 fe ff ff 01 00  00 00 01 80 fc 00 00 00  |................|
+000001e0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+000001f0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 55 aa  |..............U.|
+00000200
+
+
+=============================== StdErr Messages: ===============================
+
+File descriptor 9 (/proc/652/mounts) leaked on lvs invocation. Parent PID 7505: bash
+File descriptor 13 (pipe:[38699]) leaked on lvs invocation. Parent PID 7505: bash
+File descriptor 15 (pipe:[38700]) leaked on lvs invocation. Parent PID 7505: bash
+File descriptor 63 (pipe:[35480]) leaked on lvs invocation. Parent PID 7505: bash
+  /dev/sda6: read failed after 0 of 4096 at 4096: Input/output error
+  No volume groups found
+
+ADDITIONAL INFORMATION :
+=================== log of boot-info 2016-08-05__19h54 ===================
+boot-info version : 4ppa14
+boot-sav version : 4ppa14
+glade2script version : 3.2.2~ppa47~saucy
+boot-sav-extra version : 4ppa14
+File descriptor 9 (/proc/652/mounts) leaked on lvs invocation. Parent PID 2241: /bin/sh
+File descriptor 13 (pipe:[38699]) leaked on lvs invocation. Parent PID 2241: /bin/sh
+File descriptor 15 (pipe:[38700]) leaked on lvs invocation. Parent PID 2241: /bin/sh
+/dev/sda6: read failed after 0 of 4096 at 4096: Input/output error
+No volume groups found
+error: cannot read `/dev/sda': Input/output error.
+error: cannot read `/dev/sda': Input/output error.
+error: cannot read `/dev/sda': Input/output error.
+boot-info is executed in live-session (Boot-Repair-Disk 64bit 29nov2014, trusty, Ubuntu, x86_64)
+ls: cannot access /home/usr/.config: No such file or directory
+CPU op-mode(s):        32-bit, 64-bit
+file=/cdrom/preseed/lubuntu.seed boot=casper initrd=/casper/initrd.lz quiet splash --  debian-installer/language=nb keyboard-configuration/layoutcode=no
+
+=================== os-prober:
+
+
+=================== blkid:
+/dev/loop0: TYPE="squashfs"
+/dev/sda1: UUID="fb63ebfa-56ad-430d-8562-9828087071ad" SEC_TYPE="ext2" TYPE="ext3"
+/dev/sda6: UUID="feff52bb-ca55-4c74-bc6d-ca56ccc7d6f9" TYPE="swap"
+/dev/sr0: LABEL="Boot-Repair-Disk 64bit" TYPE="iso9660"
+/dev/zram0: UUID="7f95ba27-de1d-443c-abe9-109ef0766aff" TYPE="swap"
+/dev/zram1: UUID="6b0076ea-900b-4bd6-8677-650fb485af5a" TYPE="swap"
+/dev/zram2: UUID="f83cbde0-26a9-44ee-b430-323f583cce96" TYPE="swap"
+/dev/zram3: UUID="8f307616-aa5d-43be-9ad9-80f173cfd3e3" TYPE="swap"
+/dev/zram4: UUID="282029ca-7047-4fe9-b81f-2b5fcf5d5606" TYPE="swap"
+/dev/zram5: UUID="ebd211a7-3cee-41c3-a3da-e9575df0bf58" TYPE="swap"
+/dev/zram6: UUID="14e87829-1642-4072-bc79-7b9331410e36" TYPE="swap"
+/dev/zram7: UUID="057dbe6d-6f29-43f5-a553-5576cf20c183" TYPE="swap"
+
+Warning: extended partition does not start at a cylinder boundary.
+DOS and Linux will interpret the contents differently.
+=================== UEFI/Legacy mode:
+This live-session is not in EFI-mode.
+SecureBoot maybe enabled.
+
+
+=================== PARTITIONS & DISKS:
+sda1	: sda,	maybesepboot,	no-grubenv	nogrub,	no-docgrub,	no-update-grub,	32,	no-boot,	no-os,	not--efi--part,	part-has-no-fstab,	part-has-no-fstab,	no-nt,	no-winload,	no-recov-nor-hid,	no-bmgr,	notwinboot,	nopakmgr,	nogrubinstall,	no---usr,	part-has-no-fstab,	not-sep-usr,	standard,	farbios,	/mnt/boot-sav/sda1.
+
+sda	: not-GPT,	BIOSboot-not-needed,	has-no-EFIpart, 	not-usb,	no-os,	2048 sectors * 512 bytes
+
+
+=================== parted -l:
+
+Model: ATA ST1000LM024 HN-M (scsi)
+Disk /dev/sda: 1000GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+
+Number  Start   End     Size    Type      File system     Flags
+1      1049kB  983GB   983GB   primary   ext3            boot
+2      983GB   1000GB  16.9GB  extended
+6      983GB   992GB   8472MB  logical   linux-swap(v1)
+5      992GB   1000GB  8472MB  logical
+
+
+                                                                          Warning: Unable to open /dev/sr0 read-write (Read-only file system).  /dev/sr0
+has been opened read-only.
+                                                                          Error: /dev/sr0: unrecognised disk label
+
+                                                                          Error: /dev/zram0: unrecognised disk label
+
+                                                                          Error: /dev/zram1: unrecognised disk label
+
+                                                                          Error: /dev/zram2: unrecognised disk label
+
+                                                                          Error: /dev/zram3: unrecognised disk label
+
+                                                                          Error: /dev/zram4: unrecognised disk label
+
+                                                                          Error: /dev/zram5: unrecognised disk label
+
+                                                                          Error: /dev/zram6: unrecognised disk label
+
+                                                                          Error: /dev/zram7: unrecognised disk label
+
+=================== parted -lm:
+
+BYT;
+/dev/sda:1000GB:scsi:512:4096:msdos:ATA ST1000LM024 HN-M;
+1:1049kB:983GB:983GB:ext3::boot;
+2:983GB:1000GB:16.9GB:::;
+6:983GB:992GB:8472MB:linux-swap(v1)::;
+5:992GB:1000GB:8472MB:::;
+
+                                                                          Warning: Unable to open /dev/sr0 read-write (Read-only file system).  /dev/sr0
+has been opened read-only.
+                                                                          Error: /dev/sr0: unrecognised disk label
+
+                                                                          Error: /dev/zram0: unrecognised disk label
+
+                                                                          Error: /dev/zram1: unrecognised disk label
+
+                                                                          Error: /dev/zram2: unrecognised disk label
+
+                                                                          Error: /dev/zram3: unrecognised disk label
+
+                                                                          Error: /dev/zram4: unrecognised disk label
+
+                                                                          Error: /dev/zram5: unrecognised disk label
+
+                                                                          Error: /dev/zram6: unrecognised disk label
+
+                                                                          Error: /dev/zram7: unrecognised disk label
+
+
+=================== mount:
+/cow on / type overlayfs (rw)
+proc on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+udev on /dev type devtmpfs (rw,mode=0755)
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+/dev/sr0 on /cdrom type iso9660 (ro,noatime)
+/dev/loop0 on /rofs type squashfs (ro,noatime)
+none on /sys/fs/cgroup type tmpfs (rw)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+none on /run/shm type tmpfs (rw,nosuid,nodev)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+none on /sys/fs/pstore type pstore (rw)
+systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=systemd)
+gvfsd-fuse on /run/user/999/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=lubuntu)
+/dev/sda1 on /mnt/boot-sav/sda1 type ext3 (rw)
+
+
+=================== ls:
+/sys/block/sda (filtered):  alignment_offset bdi capability dev device discard_alignment events events_async events_poll_msecs ext_range holders inflight power queue range removable ro sda1 sda2 sda5 sda6 size slaves stat subsystem trace uevent
+/sys/block/sr0 (filtered):  alignment_offset bdi capability dev device discard_alignment events events_async events_poll_msecs ext_range holders inflight power queue range removable ro size slaves stat subsystem trace uevent
+/dev (filtered):  autofs block bsg btrfs-control bus cdrom char console core cpu cpu_dma_latency cuse disk dri ecryptfs fb0 fd full fuse hpet input kmsg kvm log mapper mcelog mei mem net network_latency network_throughput null port ppp psaux ptmx pts random rfkill rtc rtc0 sda sda1 sda2 sda5 sda6 sg0 sg1 shm snapshot snd sr0 stderr stdin stdout uhid uinput urandom v4l vga_arbiter vhci vhost-net video0 zero
+ls /dev/mapper:  control
+
+=================== df -Th:
+
+Filesystem     Type       Size  Used Avail Use% Mounted on
+/cow           overlayfs  3.9G   40M  3.9G   1% /
+udev           devtmpfs   3.9G   12K  3.9G   1% /dev
+tmpfs          tmpfs      788M  1.2M  787M   1% /run
+/dev/sr0       iso9660    614M  614M     0 100% /cdrom
+/dev/loop0     squashfs   549M  549M     0 100% /rofs
+none           tmpfs      4.0K     0  4.0K   0% /sys/fs/cgroup
+tmpfs          tmpfs      3.9G  628K  3.9G   1% /tmp
+none           tmpfs      5.0M     0  5.0M   0% /run/lock
+none           tmpfs      3.9G     0  3.9G   0% /run/shm
+none           tmpfs      100M   16K  100M   1% /run/user
+/dev/sda1      ext3       902G   72M  856G   1% /mnt/boot-sav/sda1
+
+=================== fdisk -l:
+
+Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
+255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00053413
+
+Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048  1920425983   960211968   83  Linux
+/dev/sda2      1920428030  1953523711    16547841    5  Extended
+Partition 2 does not start on physical sector boundary.
+/dev/sda5      1936975872  1953523711     8273920   82  Linux swap / Solaris
+/dev/sda6      1920428032  1936975871     8273920   82  Linux swap / Solaris
+
+Partition table entries are not in disk order
+
+
+No OS or WinEFI system
+
+
+=================== Suggested repair
+The default repair of the Boot-Repair utility would not act on the boot.
+
+
+=================== User settings
+The settings chosen by the user will not act on the boot.
+
+
+
+
